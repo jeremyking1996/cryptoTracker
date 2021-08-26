@@ -44,11 +44,12 @@
 
 .coin-price {
     width: 110px;
-    
+    margin-right: 25px;
 }
 
 .coin-volume{
     width: 230px;   
+    margin-right: 10px;
 }
 
 .coin-marketcap{
