@@ -1,7 +1,7 @@
 import React from 'react'
 import './Coin.css'
 
-const Coin = ({image, name, symbol, price, volume, priceChange, marketcap}) => {
+const Coin = ({image, name, symbol, price, volume, priceChange, marketcap, last7days}) => {
     return (
         <div className="coin-container">
             <div className="coin-row">
@@ -21,6 +21,7 @@ const Coin = ({image, name, symbol, price, volume, priceChange, marketcap}) => {
                     <p className="coin-marketcap">
                         Mkt Cap: ${marketcap.toLocaleString()}
                     </p>
+                    
             </div>
             </div>
         </div>
