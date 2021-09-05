@@ -25,6 +25,23 @@ function App() {
     coin.name.toLowerCase().includes(search.toLowerCase()
   ))
 
+  var axios = require("axios").default;
+
+    var options = {
+      method: 'GET',
+      url: 'https://rest.yahoofinanceapi.com/v6/finance/quote',
+      params: {symbols: 'THETA-USD,PLTR,CNY=X'},
+      headers: {
+        'x-api-key': 'YOUR-PERSONAL-API-KEY'
+      }
+    };
+
+    axios.request(options).then(function (response) {
+      console.log(response.data);
+    }).catch(function (error) {
+      console.error(error);
+    });
+
   return (
     <div className="coin-app">
       <div className="coin-search">
